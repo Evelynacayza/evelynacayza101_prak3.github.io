@@ -1,0 +1,240 @@
+/* === BODY GLOBAL FONT === */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-image: url('../img/bcg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  color: #2f4f4f;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  backdrop-filter: blur(1px);
+  z-index: -1;
+}
+
+/* === LOGIN BOX STYLING === */
+.login-box {
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(255, 248, 245, 0.85);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* === FONT UNTUK JUDUL === */
+h1, h2, h3, .judul {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #558a65; /* hijau sage gelap */
+}
+
+/* === TOMBOL === */
+.btn-success {
+  background-color: #9dc183;
+  border-color: #9dc183;
+  border-radius: 10px;
+}
+
+.btn-success:hover {
+  background-color: #7fa961;
+}
+
+.btn-outline-success {
+  border-color: #9dc183;
+  color: #7fa961;
+}
+
+.btn-outline-success:hover {
+  background-color: #9dc183;
+  color: white;
+}
+
+.btn-outline-danger {
+  border-color: #e57373;
+  color: #d32f2f;
+}
+
+.btn-outline-danger:hover {
+  background-color: #e57373;
+  color: white;
+}
+
+/* === FORM INPUT === */
+.form-control {
+  background-color: #fffaf7;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* === LAYOUT CONTAINER === */
+.container {
+  padding: 20px;
+}
+
+/* Glassmorphism box */
+.login-glass {
+  max-width: 480px;
+  width: 100%;
+  padding: 60px 50px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  transition: all 0.3s ease-in-out;
+
+}
+
+/* Lingkaran Icon User */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Input dengan ikon */
+.input-icon {
+  position: relative;
+}
+
+.input-icon .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.input-icon .input-field {
+  padding-left: 40px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  height: 45px;
+}
+
+/* Tombol LOGIN */
+.btn-light {
+  background-color: #fff;
+  color: #4f7854;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.btn-light:hover {
+  background-color: #9dc183;
+  color: white;
+}
+
+/* Smooth transition on hover */
+.btn, .input-field, .login-glass {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for input */
+.input-field:focus {
+  box-shadow: 0 0 5px #9dc183;
+}
+
+.judul {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-light {
+  color: #f0f0f0;
+}
+
+.fst-italic {
+  font-style: italic;
+}
+
+.btn-outline-light {
+  border: 1.5px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #4f7854;
+}
+
+.text-danger {
+  color: #d9534f !important;
+}
+
+.btn-outline-danger {
+  border: 1.5px solid #d9534f;
+  color: #d9534f;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-glass {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .judul {
+    font-size: 1.8rem;
+  }
+
+    .input-field {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .btn-light {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .judul {
+    font-size: 1.6rem; /* sekitar 25px */
+  }
+}
+
+.login-glass:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.icon-email    { color: #6ec5ff; }
+.icon-hari     { color: #ffe185; }
+.icon-tanggal  { color: #b09ae2; }
+.icon-jam      { color: #f28c8c; }
